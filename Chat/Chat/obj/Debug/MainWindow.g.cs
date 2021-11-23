@@ -49,9 +49,33 @@ namespace Chat {
         #line hidden
         
         
-        #line 12 "..\..\MainWindow.xaml"
+        #line 11 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnLogin;
+        internal System.Windows.Controls.TextBox txtMessaggio;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 16 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btnInvia;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 17 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label lblNickname;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 18 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label lblRisposta;
         
         #line default
         #line hidden
@@ -96,13 +120,28 @@ namespace Chat {
             #line hidden
             return;
             case 2:
-            this.btnLogin = ((System.Windows.Controls.Button)(target));
+            this.txtMessaggio = ((System.Windows.Controls.TextBox)(target));
             
-            #line 12 "..\..\MainWindow.xaml"
-            this.btnLogin.Click += new System.Windows.RoutedEventHandler(this.btnLogin_Click);
+            #line 11 "..\..\MainWindow.xaml"
+            this.txtMessaggio.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.TxtMessaggio_TextChanged);
             
             #line default
             #line hidden
+            return;
+            case 3:
+            this.btnInvia = ((System.Windows.Controls.Button)(target));
+            
+            #line 16 "..\..\MainWindow.xaml"
+            this.btnInvia.Click += new System.Windows.RoutedEventHandler(this.BtnInvia_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 4:
+            this.lblNickname = ((System.Windows.Controls.Label)(target));
+            return;
+            case 5:
+            this.lblRisposta = ((System.Windows.Controls.Label)(target));
             return;
             }
             this._contentLoaded = true;

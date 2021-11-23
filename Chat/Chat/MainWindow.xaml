@@ -5,17 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="339" Width="414.5">
     <Grid>
-        <TextBox x:Name="txtNickname" HorizontalAlignment="Left" Height="22" Margin="107,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TxtNickname_TextChanged"/>
-        <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Height="208" Margin="107,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" TextChanged="TxtMessaggio_TextChanged"/>
-        <Label Content="Nickname:" HorizontalAlignment="Left" Margin="107,100,0,0" VerticalAlignment="Top"/>
-        <Label Content="Messaggio:" HorizontalAlignment="Left" Margin="107,163,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nickname:" HorizontalAlignment="Left" Margin="379,100,0,0" VerticalAlignment="Top"/>
-        <Label Content="Risposta:" HorizontalAlignment="Left" Margin="379,163,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnInvia" Content="Invia" HorizontalAlignment="Left" Margin="249,169,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="BtnInvia_Click"/>
-        <Label x:Name="lblNickname" Content="" HorizontalAlignment="Left" Margin="379,127,0,0" VerticalAlignment="Top" Width="112"/>
-        <Label x:Name="lblRisposta" Content="" HorizontalAlignment="Left" Margin="379,201,0,0" VerticalAlignment="Top" Width="230" Height="208"/>
+        <TextBox x:Name="txtNickname" HorizontalAlignment="Left" Height="22" Margin="145,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TxtNickname_TextChanged"/>
+        <Label Content="Nickname:" HorizontalAlignment="Left" Margin="145,82,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnLogin" Content="LOGIN" HorizontalAlignment="Left" Margin="145,167,0,0" VerticalAlignment="Top" Width="120" Height="61" IsEnabled="False" Click="btnLogin_Click"/>
 
     </Grid>
 </Window>

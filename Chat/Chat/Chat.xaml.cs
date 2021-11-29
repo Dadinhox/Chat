@@ -24,9 +24,11 @@ namespace Chat
 
         int porta = 2003;
         UdpClient client = new UdpClient();
+        string nick, nickdest;
 
         public Chat(string nickname)
         {
+            nick = nickname;
             InitializeComponent();
         }
 
@@ -37,11 +39,25 @@ namespace Chat
             byte[] data = Encoding.ASCII.GetBytes("m;" + txtMessaggio.Text + ";");
             client.Send(data, data.Length, "localhost", porta);
 
-
+            lblMessaggio.Content = lblMessaggio.Content + "\n" + nick + ":" + "\n" + txtMessaggio.Text;
 
             ClearInvio();
 
-            
+
+
+            IPEndPoint riceveEP = new IPEndPoint(IPAddress.Any, 0);
+
+            byte[] dataReceived = client.Receive(ref riceveEP);
+
+            String risposta = Encoding.ASCII.GetString(dataReceived);
+
+            string[] campi = risposta.Split(';');
+            if(campi[0]== "m")
+            {
+                lblMessaggio.Content = lblMessaggio.Content + "\n" + nickdest + ":" + "\n" + campi[1];
+
+            }
+
         }
 
         private void TxtMessaggio_TextChanged(object sender, TextChangedEventArgs e)

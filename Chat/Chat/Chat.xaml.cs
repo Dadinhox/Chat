@@ -54,6 +54,7 @@ namespace Chat
             string[] campi = risposta.Split(';');
             if(campi[0]== "m")
             {
+                nickdest = "ciccio";
                 lblMessaggio.Content = lblMessaggio.Content + "\n" + nickdest + ":" + "\n" + campi[1];
 
             }

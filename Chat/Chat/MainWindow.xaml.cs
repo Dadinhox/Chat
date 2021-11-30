@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,10 +21,14 @@ namespace Chat
 {
 
     public partial class MainWindow : Window
-    {
+    { 
 
         public MainWindow()
         {
+            Thread T = new Thread(funzionethread);
+            Condivisa c = new Condivisa();
+          
+            T.Start(c);
             InitializeComponent();
         }
 
@@ -42,7 +48,19 @@ namespace Chat
 
             }
         }
+        void funzionethread(object o)
+        {
+            Condivisa c = (Condivisa)o;
+            TcpListener listener = new TcpListener(2003);
+            TcpClient client = listener.AcceptTcpClient();
+            StringWriter sw = new StringWriter(client.GetStream());
+            
+        }
+        void client()
+        {
+            TcpClient c = new TcpClient("localhost", 666);
 
+        }
    
      
     }

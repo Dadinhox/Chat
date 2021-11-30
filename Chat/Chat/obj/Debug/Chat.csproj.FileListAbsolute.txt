@@ -13,3 +13,4 @@ C:\D'Assaro\Tecnologie\ChatGit\Chat\Chat\Chat\obj\Debug\Chat.csproj.GenerateReso
 C:\D'Assaro\Tecnologie\ChatGit\Chat\Chat\Chat\obj\Debug\Chat.csproj.CoreCompileInputs.cache
 C:\D'Assaro\Tecnologie\ChatGit\Chat\Chat\Chat\obj\Debug\Chat.exe
 C:\D'Assaro\Tecnologie\ChatGit\Chat\Chat\Chat\obj\Debug\Chat.pdb
+C:\D'Assaro\Tecnologie\ChatGit\Chat\Chat\Chat\obj\Debug\Chat.g.cs
